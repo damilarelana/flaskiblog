@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<title>
+  {% block title%}
+  {% endblock %}
+</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<nav>
+  <h1>Awokogbon</h1>
+  <a>About</a> |
+  <a>Portfolio</a> | 
+  <a>Publications</a> |
+  <a>Articles</a>
+  <ul>
+    {% if g.user %}
+      <li><span>{{ g.user['username'] }}</span>
+      <li><span><a href="{{  url_for('auth.logout') }}">Log Out</a></span>
+    {% else %}
+      <li><span><a href="{{  url_for('auth.login') }}">Log In</a></span>
+      <li><span><a href="{{  url_for('auth.register') }}">Register</a></span>
+    {% endif %}
+  </ul>
+</nav>
+
+<section class="content">
+  <header>
+    {% block header %}
+    {% endblock %}
+  </header>
+
+  {% for message in get_flashed_messages() %}
+    <div class="flash"> 
+      {{message}}
+    </div>
+  {% endfor %}
+  
+  {% block content %}
+  {% endblock %}
+</section>

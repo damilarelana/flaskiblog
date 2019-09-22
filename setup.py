@@ -1,0 +1,32 @@
+from setuptools import find_packages, setup
+
+setup(
+  name='awokogbon',
+  description='Portfolio Blog',
+  author='Damilare Lana',
+  author_email='damilarelana@gmail.com',
+  version='1.0.0',
+  packages=find_packages(),
+  include_package_data=True,
+  zip_safe=False,
+  install_requires=[
+    'flask',
+    'flask-bootstrap',
+    'flask-migrate',
+    'Flask-Session',
+    'Flask-SQLAlchemy',
+    'Werkzeug',
+    'SQLAlchemy',
+    'MarkupSafe',
+    'Jinja2',
+    'itsdangerous',
+    'Click',
+    'itsdangerous',
+    'Markdown',
+    'flask-babel',
+    'flask-wtf',
+    'pytest',
+    'pytest-xdist',
+    'coverage',
+  ],
+)

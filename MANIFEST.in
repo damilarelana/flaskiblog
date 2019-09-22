@@ -1,0 +1,4 @@
+include awokogbon/schema.sql
+graft awokogbon/static
+graft awokogbon/templates
+global-exclude *.pyc
