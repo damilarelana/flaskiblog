@@ -1,6 +1,6 @@
-# Flaskiblog
+### Awokogbon
 
-## A bare-bones blog with authentication [login, logout, register] features and tests coverage based on
+A bare-bones blog with authentication [login, logout, register] features and tests coverage based on
 
 * Flask micro-framework
 * Pytest
